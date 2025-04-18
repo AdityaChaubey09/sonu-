@@ -11,11 +11,15 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
-  // Remove the swcMinify option
-  // compiler: {
-  //   removeConsole: process.env.NODE_ENV === "production",
-  // },
-  // swcMinify: true, <- This is causing the error
+  // Enable experimental Server Actions
+  experimental: {
+    serverActions: true,
+  },
+  // Compiler options
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  // Improve build performance
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -25,4 +29,3 @@ const nextConfig = {
 }
 
 export default nextConfig
-
