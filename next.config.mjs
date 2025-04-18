@@ -11,12 +11,11 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
-  // Optimize for production
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
-  },
-  // Improve build performance
-  swcMinify: true,
+  // Remove the swcMinify option
+  // compiler: {
+  //   removeConsole: process.env.NODE_ENV === "production",
+  // },
+  // swcMinify: true, <- This is causing the error
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -26,3 +25,4 @@ const nextConfig = {
 }
 
 export default nextConfig
+
